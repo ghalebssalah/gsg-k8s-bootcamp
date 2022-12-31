@@ -26,3 +26,9 @@ kubectl exec -ti my-first-pod -- /bin/sh
 kubectl apply -f tutum-deployment.yaml
 kubectl apply -f tutum-service.yaml
 ```
+
+## Access your pod's poage
+
+```
+kubectl port-forward svc/tutum 8080:80
+```
