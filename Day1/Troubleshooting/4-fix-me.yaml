@@ -1,0 +1,26 @@
+#
+#  I get weird errors
+# 
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broken2
+spec:
+  selector:
+      matchLabels:
+        app: broken-app
+    template:
+      metadata:
+          labels:
+            app: broken-app
+    spec:
+    containers:
+      - name: nginx-broken
+        image: nginxdemos/hello:v1
+        ports:
+          - containerPort: 80
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8080

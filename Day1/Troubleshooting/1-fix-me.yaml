@@ -1,0 +1,22 @@
+#
+#  I run the pod, but it's not showing anything!
+# 
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broken
+spec:
+  selector:
+      matchLabels:
+        app: broken-app
+  template:
+    metadata:
+        labels:
+          app: broken-app
+    spec:
+      containers:
+        - name: nginx-broken
+          image: nginxdemos/hello
+          ports:
+            - containerPort: 8080

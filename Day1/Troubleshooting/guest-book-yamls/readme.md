@@ -1,0 +1,1 @@
+apply all the yaml files and check why the application is not working
