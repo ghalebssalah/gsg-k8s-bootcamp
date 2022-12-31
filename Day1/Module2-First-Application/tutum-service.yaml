@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: tutum
+spec:
+  selector:
+    app: hello-world
+  ports:
+  - name: tutum
+    port: 80
+
