@@ -2,7 +2,7 @@
 #  I get weird errors
 # 
 
-apiVersion: apps/v1
+apiVersion: v1
 kind: Deployment
 metadata:
   name: broken2

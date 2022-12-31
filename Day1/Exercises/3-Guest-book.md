@@ -2,7 +2,7 @@
 
 Apply all the yaml files in guest-book-yamls directory and then:
 
-##
+
 1. Check your pods, deployment, service
 2. Scale your frontend pods to 1 pod
 3. Access your frontend through service
