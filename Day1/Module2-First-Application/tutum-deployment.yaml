@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: tutum
 spec:
+  replicas: 3
   selector:
       matchLabels:
         app: hello-world
