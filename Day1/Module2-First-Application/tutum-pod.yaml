@@ -1,0 +1,12 @@
+apiVersion: v1 # String
+kind: Pod # String
+metadata: # Dictionary
+  name: hello-world
+  labels: # Dictionary
+    app: hello-world
+spec:
+  containers: #list of objects
+    - name: hello-world
+      image: tutum/hello-world
+      ports:
+        - containerPort: 80
