@@ -1,28 +1,16 @@
-# You got a request to create multiple file configuration files on disk 
+# You got a request to create multiple onfiguration files on deployment 
 
-1- first file
+1- first file db.config
 
 ```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: mydb-config-file
-data:
-  db.config: |
     database-name: mydb
     database-port: 3306
     database-host: mysql-server
 ```
 
-2- second file 
+2- second file kafka.config
 
 ```yaml
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: kafka-config-file
-data:
-  kafka.config: |
     kafka-host: myKafaka-broker
     kafka-port: 9092
 ```
