@@ -63,7 +63,7 @@ az acr repository show-tags --name ${ACR_NAME}.azurecr.io --repository gsg-bootc
 ```
 
 
-# Connect to ACR using integration with AKS
+# (option 1, the easy way) Connect to ACR using integration with AKS
 
 ## Attach your ACR to the cluster
 
@@ -79,7 +79,8 @@ az aks update -n AKS_CLUSTER_NAME -g RESOURCE_GROUP --detach-acr ACR_NAME
 
 ```
 
-# Connect to ACR using SP and Pull Secrets
+# (option 2, the generic way ) Connect to ACR using SP and Pull Secrets
+
 reference: https://learn.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes
 
 ```
