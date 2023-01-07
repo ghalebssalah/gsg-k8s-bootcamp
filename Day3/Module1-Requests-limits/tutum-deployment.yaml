@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tutum
+spec:
+  replicas: 3
+  selector:
+      matchLabels:
+        app: hello-world
+  template:
+    metadata:
+        labels:
+          app: hello-world
+    spec:
+      containers:
+        - name: hello-world
+          image: tutum/hello-world
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+            limits:
+              cpu: "600m"
+              memory: "1Gi"
+          ports:
+            - containerPort: 80

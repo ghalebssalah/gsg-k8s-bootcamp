@@ -46,6 +46,7 @@ docker push ${ACR_NAME}.azurecr.io/gsg-bootcamp-service:v1
 
 ```
 az acr build --registry ${ACR_NAME} --image gsg-bootcamp-service:v1 .
+
 ```
 
 
@@ -72,7 +73,7 @@ az aks update -n AKS_CLUSTER_NAME -g RESOURCE_GROUP --attach-acr ACR_NAME
 
 ```
 
-## Detatch 
+## Detatch you ACR
 
 ```
 az aks update -n AKS_CLUSTER_NAME -g RESOURCE_GROUP --detach-acr ACR_NAME
