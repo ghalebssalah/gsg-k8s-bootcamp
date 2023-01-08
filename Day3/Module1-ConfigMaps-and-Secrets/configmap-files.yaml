@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myapp-config-map-file
+data:
+  app.config: |
+    database-name: mydb
+    database-port: 3306
+    database-host: mysql-server
+  
