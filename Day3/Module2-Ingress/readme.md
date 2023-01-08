@@ -21,7 +21,7 @@ Reference: https://kubernetes.io/docs/reference/kubernetes-api/service-resources
 1. first get your aks node resource group
 
 ```
- az aks show --resource-group {AKS-RESOURCE-GROUP} --name {AKS-NAME} --query nodeResourceGroup -o tsv
+ az aks show --resource-group {AKS_RESOURCE_GROUP} --name {AKS_NAME} --query nodeResourceGroup -o tsv
 ```
 
 for example:  az aks show --resource-group gsalah-rg --name gsalah-aks --query nodeResourceGroup -o tsv
@@ -68,7 +68,6 @@ kubectl create namespace ingress-nginx
 2. Add the official nginx repo 
 ```
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 helm repo update
 ```
 
