@@ -4,5 +4,5 @@ metadata:
   name: myapp-config-map
 data:
   environment: dev
-  log_level: INFO
+  log_level: DEBUG
   

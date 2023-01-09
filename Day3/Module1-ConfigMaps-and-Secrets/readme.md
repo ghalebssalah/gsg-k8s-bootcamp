@@ -90,6 +90,6 @@ Add the following annotations to your deployment
 
 ```
 annotations:
-    reloader.stakater.com/search: "true"
+    reloader.stakater.com/auto: "true"
 
 ```
