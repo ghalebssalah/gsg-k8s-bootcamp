@@ -62,3 +62,22 @@ you need to reference the configuration file on disk
 
 ```
 
+
+
+# Reloading
+
+* Reference: https://github.com/stakater/Reloader
+
+installation 
+```
+kubectl apply -k https://github.com/stakater/Reloader/deployments/kubernetes
+```
+
+
+You need to following annotations to your deployment
+
+```
+annotations:
+    reloader.stakater.com/search: "true"
+    
+```

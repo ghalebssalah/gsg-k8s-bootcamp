@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: gsalahacr.azurecr.io/gsg-bootcamp-service:v1
+          image: tutum/hello-world
           ports:
             - containerPort: 80
           volumeMounts:
