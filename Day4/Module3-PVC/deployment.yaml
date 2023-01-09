@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tutum
+spec:
+  replicas: 1
+  selector:
+      matchLabels:
+        app: hello-world
+  template:
+    metadata:
+        labels:
+          app: hello-world
+    spec:
+      containers:
+        - name: hello-world
+          image: tutum/hello-world
+          ports:
+            - containerPort: 80
+          volumeMounts:
+          - mountPath: "/mnt/azure"
+            name: volume
+      volumes:
+        - name: volume
+          persistentVolumeClaim:
+            claimName: azure-managed-disk-pvc

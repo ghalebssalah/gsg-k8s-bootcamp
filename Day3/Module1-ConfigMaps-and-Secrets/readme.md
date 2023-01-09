@@ -68,16 +68,28 @@ you need to reference the configuration file on disk
 
 * Reference: https://github.com/stakater/Reloader
 
-installation 
+installation using kubectl
+
 ```
 kubectl apply -k https://github.com/stakater/Reloader/deployments/kubernetes
 ```
 
+installation using helm 
 
-You need to following annotations to your deployment
+```
+helm repo add stakater https://stakater.github.io/stakater-charts
+
+helm repo update
+
+helm install stakater/reloader --generate-name
+
+```
+
+Add the following annotations to your deployment
+
 
 ```
 annotations:
     reloader.stakater.com/search: "true"
-    
+
 ```
