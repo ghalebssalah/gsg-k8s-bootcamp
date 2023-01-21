@@ -30,7 +30,7 @@ you will get a resource group name like : MC_gsalah-rg_gsalah-aks_westus3
 
 
 
-2. now create a static publich ip
+2. now create a static public ip
 
 ```
 az network public-ip create --resource-group  {AKS-NODE-RESOURCE-GROUP} \
