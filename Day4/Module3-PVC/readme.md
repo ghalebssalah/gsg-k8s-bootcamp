@@ -10,6 +10,7 @@ check the status
 
 ```
 kubectl get pvc -w
+kubectl get pv
 ```
 
 
@@ -17,7 +18,7 @@ kubectl get pvc -w
 
 which pod is using my pvc
 ```
-kubectl get po -o json --all-namespaces | jq -j '.items[] | "\(.metadata.namespace), \(.metadata.name), \(.spec.volumes[].persistentVolumeClaim.claimName)\n"' | grep -v null
+kubectl get pod -o json --all-namespaces | jq -j '.items[] | "\(.metadata.namespace), \(.metadata.name), \(.spec.volumes[].persistentVolumeClaim.claimName)\n"' | grep -v null
 
 ```
 
